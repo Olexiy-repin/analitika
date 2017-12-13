@@ -1,0 +1,131 @@
+#sec-02 {
+  padding-top: 5.6rem; //6.7
+  padding-bottom: 3rem;
+  background-image: url(img/bg-lines.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sec-02 .icons {
+  margin-bottom: 2rem;
+}
+
+#sec-02 .icons [class*=col-]:nth-child(-n + 2){
+  margin-bottom: 1.7rem;
+}
+
+#sec-02 .description {
+  margin-bottom: 2.8rem; //3.3
+}
+
+#sec-02 .sec-02__title {
+  font-family: RadomirEB;
+  font-size: pxToRem(36px); //48
+  text-transform: uppercase;
+  color: #28292d;
+  margin-bottom: .3rem; //.7
+}
+
+#sec-02 .sec-02__paragraph {
+  font-family: RadomirEB;
+  font-size: pxToRem(19.8px); //24
+  color: #28292d;
+}
+
+#sec-02 .icons [class*=col-]:nth-child(4) .sec-02__icons-container {
+  text-align: right;
+}
+
+%icons-container {
+  // width: 0%;
+  position: relative;
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 32%;
+  }
+}
+
+#sec-02 .sec-02__icons-container {
+  @extend %icons-container;
+  &::after {
+    content: url("img/sec-02/sec-02_sm-line-img.png");
+  }
+}
+
+#sec-02 .icons [class*=col-]:nth-child(3) .sec-02__icons-container {
+  @extend %icons-container;
+  &::after {
+    content: url("img/sec-02/sec-02_sm-tilda-img.png");
+    right: -21%;
+    top: 36%;
+  }
+}
+
+#sec-02 .icons [class*=col-]:nth-child(4) .sec-02__icons-container {
+  @extend %icons-container;
+  &::after {
+    right: 81%;
+    top: 42%;
+    content: url("img/sec-02/sec-02_sm-tilda-img.png");
+  }
+}
+
+.sec-02__text {
+  font-family: RadomirEB;
+  font-size: pxToRem(20px); //30
+  text-align: right;
+  color: #28292d;
+}
+
+// .sec-02__text-span {
+//   background-color: #cfc2a9;
+// }
+
+@media (min-width: 768px) {
+  #sec-02 {
+    padding-top: 8rem;
+  }
+
+  #sec-02 .sec-02__title {
+    font-size: pxToRem(48px);
+    margin-bottom: .7rem;
+  }
+
+  #sec-02 .sec-02__paragraph {
+    font-size: pxToRem(24px);
+  }
+
+  #sec-02 .description {
+    margin-bottom: 4.5rem;
+  }
+
+  #sec-02 .icons [class*=col-]:nth-child(-n + 2){
+    margin-bottom: 3.6rem;
+  }
+
+  #sec-02 .sec-02__icons-container {
+    &::after {
+      content: url("img/sec-02/sec-02_md-line-img.png");
+    }
+  }
+
+  #sec-02 .icons [class*=col-]:nth-child(3) .sec-02__icons-container {
+    &::after {
+      content: url("img/sec-02/sec-02_md-tilda-img.png");
+      right: -21%;
+      top: 36%;
+    }
+  }
+
+  #sec-02 .icons [class*=col-]:nth-child(4) .sec-02__icons-container {
+    &::after {
+      right: 81%;
+      top: 42%;
+      content: url("img/sec-02/sec-02_md-tilda-img.png");
+    }
+  }
+}

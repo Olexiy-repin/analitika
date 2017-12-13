@@ -1,0 +1,135 @@
+$text-color: #28292d;
+
+#sec-06 {
+  padding-top: 5.7rem;
+  position: relative;
+  &::before {
+    display: block;
+    content: url("img/sec-06/pattern.png");
+    position: absolute;
+    top: 0;
+    right: 3%;
+  }
+}
+
+.sec-06__title {
+  font-family: RadomirEB;
+  font-size: pxToRem(36px);
+  color: $text-color;
+  text-transform: uppercase;
+  margin-bottom: .1rem;
+}
+
+.sec-06__text {
+  font-family: RadomirEB;
+  font-size: pxToRem(20px);
+  color: $text-color;
+  padding-right: 1.2rem;
+}
+
+.logos {
+  position: relative;
+  &::before {
+    display: block;
+    content: url(img/sec-06/line.png);
+    position: absolute;
+    top: -56%;
+    right: 0;
+  }
+
+  &::after {
+    display: block;
+    content: url(img/sec-06/line.png);
+    position: absolute;
+    bottom: -43%;
+    left: 0;
+  }
+}
+
+.logos__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sec-06 .sec-06-row > [class*=col-]:first-child {
+  margin-bottom: 4.9rem;
+}
+
+#sec-06 .first-logos-row {
+   margin-bottom: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  #sec-06 {
+    padding-top: 8rem;
+    &::before {
+      content: url("img/sec-06/md-pattern.png");
+      right: 0;
+    }
+  }
+
+  .sec-06__title {
+    font-size: pxToRem(48px);
+    margin-bottom: .6rem;
+    padding-right: 5.1rem;
+  }
+
+  .sec-06__text {
+    font-size: pxToRem(24px);
+    padding-right: 4.3rem;
+  }
+
+  .logos {
+    width: 79%;
+    &::before {
+      content: url(img/sec-06/md-line.png);
+      top: -50%;
+      right: -41%;
+    }
+
+    &::after {
+      content: url(img/sec-06/md-line.png);
+      bottom: -39%;
+      left: -13%;
+    }
+  }
+
+  #sec-06 .sec-06-row > [class*=col-]:first-child {
+    margin-bottom: 8.7rem;
+  }
+
+  #sec-06 .first-logos-row {
+     margin-bottom: 2.9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #sec-06 {
+    padding-top: 6.7rem;
+    &::before {
+      content: url("img/sec-06/lg-pattern.png");
+      top: 5%;
+      right: 40.4%;
+    }
+  }
+
+  .sec-06__title {
+    padding-right: 2.4rem;
+  }
+
+  #sec-06 .sec-06-row > [class*=col-]:first-child {
+    margin-bottom: 0;
+  }
+
+  .logos {
+    width: 86%;
+    margin-top: 3.2rem;
+    &::before {
+      right: -17%;
+    }
+
+    &::after {
+      left: -18%;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+$inline-title: #a38f6a;
+
+#sec-01 {
+  position: relative;
+  background-color: #222222;
+  background-image: url(img/sec-01/sec-01-bg.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 2.8rem;
+  padding-bottom: 6rem; //16
+}
+
+#sec-01 .sec-01__header [class*=col-]:first-child {
+  margin-bottom: 3.8rem;
+}
+
+#sec-01 .logo {
+  width: pxToRem(35px); //51
+  height: pxToRem(30px);
+  fill: #fff;
+}
+
+#sec-01 .logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#sec-01 .title-container {
+  color: #fff;
+}
+
+#sec-01 .title {
+  font-family: RadomirEB;
+  font-size: pxToRem(34px);
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: -.5px;
+  margin-bottom: 1.6rem; //1.7
+}
+
+#sec-01 .title__inline-text {
+  display: block;
+  color: $inline-title;
+  &::before {
+    display: inline-block;
+    content:"\00ab";
+  }
+  &::after {
+    display: inline-block;
+    content:"\00bb";
+  }
+}
+
+// Paragraph before title
+#sec-01 .title-paragraph {
+  font-family: RadomirR;
+  font-size: pxToRem(18px); //24
+  line-height: 1.2;
+}
+
+#sec-01 .title-paragraph__inline {
+  display: block;
+}
+
+#sec-01 .row .col-12:first-of-type {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  #sec-01 {
+    padding-bottom: 14.3rem;
+  }
+
+  #sec-01 .logo {
+    width: pxToRem(51px);
+  }
+
+  #sec-01 .title {
+    font-size: pxToRem(48px);
+    margin-bottom: 1.2rem;
+  }
+
+  #sec-01 .title-paragraph {
+    font-size: pxToRem(24px);
+  }
+
+  #sec-01 .title-paragraph__inline-md {
+    display: block;
+  }
+
+  #sec-01 .sec-01__header [class*=col-]:first-child {
+    margin-bottom: 11.6rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  #sec-01 {
+    padding-bottom: 16rem;
+    &::before {
+      display: block;
+      content: "";
+      width: pxToRem(556px);
+      height: pxToRem(554px);
+      position: absolute;
+      bottom: -28%;
+      right: 20%;
+      background-image: url(img/sec-01/pattern.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &::after {
+      display: block;
+      content: "";
+      width: pxToRem(34px);
+      height: pxToRem(121px);
+      position: absolute;
+      bottom: -11.2%;
+      right: 26.1%;
+      background-image: url(img/sec-01/lines.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  #sec-01 .title {
+    margin-bottom: 1.7rem;
+  }
+
+  #sec-01 .title-paragraph__inline-md {
+    display: inline;
+  }
+
+  #sec-01 .sec-01__header [class*=col-]:first-child {
+    margin-bottom: 10rem;
+  }
+}

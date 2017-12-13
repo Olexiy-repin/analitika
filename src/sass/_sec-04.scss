@@ -1,0 +1,265 @@
+$text-color: #28292d;
+
+#sec-04 {
+  background-image: url(img/sec-04/sec-04-bg.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 5.7rem;
+  padding-bottom: 3.3rem;
+}
+
+.sec-04__title {
+  font-family: RadomirEB;
+  font-size: pxToRem(36px);
+  text-transform: uppercase;
+  color: $text-color;
+}
+
+.sec-04__paragraph {
+  font-family: RadomirEB;
+  font-size: pxToRem(20px);
+  color: $text-color;
+}
+
+// ORDERED LIST
+#sec-04 .desc-row [class*=col-]:first-child {
+  margin-bottom: 2.3rem
+}
+
+#sec-04 .desc-row {
+  margin-bottom: 5.1rem;
+}
+
+.list {
+  color: $text-color;
+}
+
+.list__item {
+  display: flex;
+  margin-bottom: .7rem;
+}
+
+.list__item:last-child {
+  margin-bottom: 0;
+}
+
+.list__counter {
+  width: 33%;
+  font-family: RadomirEB;
+  font-size: 2.8rem;
+  color: #b39c72;
+}
+
+.counter-wrapper {
+  position: relative;
+  &::after {
+    display: block;
+    content: url("img/sec-04/sec-04-line.png");
+    position: absolute;
+    top: 32%;
+    left: 0;
+  }
+}
+
+.list__content {
+  width: 66%;
+  padding-top: .5rem;
+  }
+
+.list__title {
+  font-family: RadomirEB;
+  font-size: pxToRem(20px);
+  margin-bottom: 0.7rem;
+}
+
+.list__text {
+  font-family: RadomirR;
+  line-height: 1.5;
+}
+
+#sec-04 .slash {
+  font-size: 1.4rem;
+}
+
+// UNORDERED LIST
+.unordered-list-row [class*=col-] {
+  margin-bottom: 2rem;
+}
+
+.unordered-list-title {
+  font-family: RadomirEB;
+  font-size: pxToRem(24px);
+  margin-bottom: 2.3rem;
+}
+
+.unordered-list {
+  margin-left: 1.1rem;
+}
+
+.unordered-list__item {
+  font-family: RadomirR;
+  margin-bottom: .9rem;
+}
+
+.unordered-list__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  #sec-04 {
+    padding-top: 7.9rem;
+    padding-bottom: 10rem;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: -3%;
+      right: 13%;
+      display: block;
+      content: url("img/sec-04/sec-04-md-vertical-line.png");
+    }
+
+    &::after {
+      position: absolute;
+      top: 18.2%;
+      right: 5%;
+      display: block;
+      content: url("img/sec-04/sec-04-md-vertical-line.png");
+    }
+  }
+
+  .sec-04__title {
+    font-size: pxToRem(48px);
+    margin-bottom: .5rem;
+  }
+
+  .sec-04__paragraph {
+    font-size: pxToRem(24px);
+  }
+// ORDERED LIST
+  .list__counter {
+    width: 17%;
+    font-size: 3.1rem;
+  }
+
+  .list__content {
+    width: 83%;
+    }
+
+  .list__title {
+    font-size: pxToRem(24px);
+  }
+
+  #sec-04 .desc-row [class*=col-]:first-child {
+    margin-bottom: 3.1rem
+  }
+
+  .counter-wrapper {
+    &::after {
+      content: url("img/sec-04/sec-04-md-line.png");
+    }
+  }
+
+  .list__item {
+    margin-bottom: .3rem;
+  }
+
+  .list__item:nth-child(2) {
+    margin-bottom: 1.9rem;
+  }
+// UNORDERED LIST
+  .unordered-list-container {
+    display: flex;
+  }
+
+  .unordered-list-title {
+    width: 63.5%;
+    font-size: pxToRem(30px);
+  }
+
+  .unordered-list {
+    width: 36.5%;
+    padding-top: .4rem;
+  }
+
+  #sec-04 .desc-row {
+    margin-bottom: 7.2rem;
+  }
+
+  #sec-04 .picture {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .sec-04__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  #sec-04 {
+    padding-top: 6.3rem;
+    padding-bottom: 13.4rem;
+    background-image: url(img/sec-04/sec-04-md-bg.png);
+    &::before {
+      top: -5.7%;
+      left: 39%;
+    }
+
+    &::after {
+      top: 36%;
+      left: 44.3%;
+    }
+  }
+
+  #sec-04 .desc-row {
+    margin-bottom: 7.6rem;
+  }
+
+  .list__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.7rem;
+  }
+
+  .list__counter {
+    width: 18%;
+  }
+
+  .list__content {
+    width: 82%;
+    }
+    .sec-04__title {
+      margin-bottom: .9rem;
+    }
+
+    .unordered-list-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .unordered-list-title {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .unordered-list {
+    width: 100%;
+    padding-top: 0;
+    margin-left: 0.9rem;
+  }
+
+  .unordered-list-row [class*=col-]:last-child {
+    position: relative;
+  }
+
+  .unordered-list-row [class*=col-]:last-child .picture {
+    display: block;
+    position: absolute;
+    right: -3.4%;
+    top: -34%;
+  }
+}

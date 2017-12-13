@@ -1,0 +1,115 @@
+#sec-05 {
+  background-image: url(img/sec-05/sec-05-bg-lines.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: #222222;
+  padding-top: 4.3rem;
+  padding-bottom: 4.7rem;
+}
+
+.sec-05__title {
+  font-family: RadomirEB;
+  font-size: pxToRem(36px);
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.sec-05__text {
+  font-family: RadomirEB;
+  font-size: pxToRem(20px);
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #sec-05 {
+    padding-top: 6.7rem;
+    padding-bottom: 7.1rem;
+  }
+
+  #sec-05 .container--width {
+    padding: 0 .9rem;
+  }
+
+  .sec-05__title {
+    position: relative;
+    font-family: RadomirEB;
+    font-size: pxToRem(48px);
+    margin-bottom: .7rem;
+    &::before {
+      display: block;
+      content: url("img/sec-05/double-vertical-arrow.png");
+      position: absolute;
+      top: 18.2%;
+      left: -1%;
+    }
+    &::after {
+      display: block;
+      content: url("img/sec-05/arrow.png");
+      position: absolute;
+      top: -57%;
+      right: 18%;
+    }
+  }
+
+  .sec-05__text {
+    position: relative;
+    font-family: RadomirEB;
+    font-size: pxToRem(24px);
+    padding: 0 2.2rem;
+    &::after {
+      display: block;
+      content: url("img/sec-05/arrow.png");
+      position: absolute;
+      bottom: 20%;
+      left: 29.7%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #sec-05 {
+    position: relative;
+    &::before {
+      display: block;
+      content: url("img/sec-05/brown-x.png");
+      position: absolute;
+      top: 24.3%;
+      right: 17.6%;
+    }
+    &::after {
+      display: block;
+      content: url("img/sec-05/smaller-x.png");
+      position: absolute;
+      bottom: 37%;
+      right: 21.2%;
+    }
+  }
+
+  .sec-05__title {
+    padding: 0 12rem;
+    &::before {
+      left: 16.5%;
+    }
+    &::after {
+      right: 29%;
+    }
+  }
+
+  .sec-05__text {
+    padding: 0 14.4rem;
+    &::before {
+      display: block;
+      content: url("img/sec-05/big-x.png");
+      position: absolute;
+      top: 2%;
+      left: 2.7%;
+    }
+    &::after {
+      left: 36.7%;
+    }
+  }
+}

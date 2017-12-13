@@ -1,0 +1,37 @@
+$baseFontSize: 16px;
+
+@function pxToRem($val) {
+  $remSize: $val/$baseFontSize;
+  @return #{$remSize}rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container--width {
+  max-width: pxToRem(1158px);
+  min-width: pxToRem(320px);
+}
+
+.line-break {
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .container--width {
+    padding: 0 5.5rem;
+  }
+
+  .line-break-md {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .line-break-lg {
+    display: block;
+  }
+}

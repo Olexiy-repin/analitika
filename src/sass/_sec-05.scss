@@ -24,14 +24,21 @@
   text-align: center;
 }
 
+
+
 @media (min-width: 768px) {
   #sec-05 {
     padding-top: 6.7rem;
     padding-bottom: 7.1rem;
+    background-image: url(img/sec-05/sec-05-bg-md-lines.png);
   }
 
   #sec-05 .container--width {
-    padding: 0 .9rem;
+    padding: 0;
+  }
+
+  .sec-05__content {
+    padding: 0 1rem;
   }
 
   .sec-05__title {
@@ -73,6 +80,7 @@
 @media (min-width: 1200px) {
   #sec-05 {
     position: relative;
+    background-image: url(img/sec-05/sec-05-bg-lg-lines.png);
     &::before {
       display: block;
       content: url("img/sec-05/brown-x.png");

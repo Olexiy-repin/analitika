@@ -2,6 +2,7 @@ $text-color: #28292d;
 
 #sec-06 {
   padding-top: 5.7rem;
+  padding-bottom: 4rem;
   position: relative;
   &::before {
     display: block;
@@ -62,6 +63,7 @@ $text-color: #28292d;
 @media (min-width: 768px) {
   #sec-06 {
     padding-top: 8rem;
+    padding-bottom: 3rem;
     &::before {
       content: url("img/sec-06/md-pattern.png");
       right: 0;

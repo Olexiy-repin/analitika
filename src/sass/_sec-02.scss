@@ -1,7 +1,7 @@
 #sec-02 {
-  padding-top: 5.6rem; //6.7
+  padding-top: 5.6rem;
   padding-bottom: 3rem;
-  background-image: url(img/bg-lines.png);
+  background-image: url(img/sec-02/bg-sm-lines.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +38,6 @@
 }
 
 %icons-container {
-  // width: 0%;
   position: relative;
   &::after {
     display: block;
@@ -81,12 +80,10 @@
   color: #28292d;
 }
 
-// .sec-02__text-span {
-//   background-color: #cfc2a9;
-// }
-
 @media (min-width: 768px) {
   #sec-02 {
+    background-image: url(img/sec-02/bg-md-lines.png);
+    background-size: 102.7%;
     padding-top: 8rem;
   }
 
@@ -110,22 +107,79 @@
   #sec-02 .sec-02__icons-container {
     &::after {
       content: url("img/sec-02/sec-02_md-line-img.png");
+      top: 36%;
+      right: 7%;
     }
   }
 
   #sec-02 .icons [class*=col-]:nth-child(3) .sec-02__icons-container {
     &::after {
       content: url("img/sec-02/sec-02_md-tilda-img.png");
-      right: -21%;
-      top: 36%;
+      right: -3%;
+      top: 41%;
     }
   }
 
   #sec-02 .icons [class*=col-]:nth-child(4) .sec-02__icons-container {
     &::after {
-      right: 81%;
-      top: 42%;
+      right: 86%;
+      top: 44%;
       content: url("img/sec-02/sec-02_md-tilda-img.png");
     }
+  }
+
+  .sec-02__text {
+    font-size: pxToRem(30px);
+  }
+
+  .sec-02__text-span {
+    background-color: #cfc2a9;
+  }
+
+  #sec-02 .icons {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #sec-02 {
+    background-image: url(img/sec-02/bg-lg-lines.png);
+    background-size: 100%;
+    padding-top: 6.7rem;
+  }
+
+  #sec-02 .description {
+    margin-bottom: 3.4rem;
+  }
+
+  #sec-02 .sec-02__icons-container {
+    &::after {
+      content: url("img/sec-02/sec-02_md-line-img.png");
+      right: -3%;
+    }
+  }
+
+  #sec-02 .icons [class*=col-]:nth-child(3) .sec-02__icons-container {
+    &::after {
+      content: url("img/sec-02/sec-02_md-tilda-img.png");
+      right: -12%;
+      top: 37%;
+    }
+  }
+
+  #sec-02 .icons [class*=col-]:nth-child(4) .sec-02__icons-container {
+    &::after {
+      right: 76%;
+      top: 40%;
+      content: url("img/sec-02/sec-02_md-tilda-img.png");
+    }
+  }
+
+  #sec-02 .icons [class*=col-]:nth-child(-n + 2){
+    margin-bottom: 0rem;
+  }
+
+  #sec-02 .icons {
+    margin-bottom: 1.3rem;
   }
 }

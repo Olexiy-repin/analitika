@@ -50,12 +50,12 @@ $text-color: #28292d;
 
 @media (min-width: 768px) {
   #sec-03 {
-    padding-top: 9.5rem;
+    padding-top: 5rem;
     padding-bottom: 9.7rem;
     background-image: url(img/sec-03/sec-03-bg.png);
+    background-size: 102.7%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .sec-03__desc-title {
@@ -84,9 +84,10 @@ $text-color: #28292d;
 
 @media (min-width: 1200px) {
   #sec-03 {
-    padding-top: 5.5rem;
+    padding-top: 3.3rem;
     padding-bottom: 4.1rem;
     background-image: url(img/sec-02/bg-lines.png);
+    background-size: 100%;
   }
 
   .sec-03-row {

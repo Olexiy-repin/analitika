@@ -121,7 +121,7 @@ $text-color: #28292d;
 
     &::after {
       position: absolute;
-      top: 18.2%;
+      top: 16.3%;
       right: 5%;
       display: block;
       content: url("img/sec-04/sec-04-md-vertical-line.png");
@@ -179,7 +179,8 @@ $text-color: #28292d;
 
   .unordered-list {
     width: 36.5%;
-    padding-top: .4rem;
+    padding-top: .2rem;
+    margin-left: 3.2rem;
   }
 
   #sec-04 .desc-row {
@@ -210,7 +211,7 @@ $text-color: #28292d;
     }
 
     &::after {
-      top: 36%;
+      top: 29.6%;
       left: 44.3%;
     }
   }

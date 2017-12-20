@@ -22,6 +22,17 @@ gulp.task('html', function(){
       }));
 });
 
+gulp.task('html-suc', function(){
+  return gulp.src('./src/html/success.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest('./dist'))
+      .pipe(browserSync.reload({
+        stream: true
+      }));
+});
+
 // TASK FOR CSS
 gulp.task('css', function(){
   return gulp.src('./src/sass/*.scss')
@@ -88,6 +99,7 @@ gulp.task('fonts', function(){
 // TASK FOR WATCH
 gulp.task('watch', function(){
   gulp.watch('./src/html/**/*.html', ['html']);
+  gulp.watch('./src/html/**/*.html', ['html-suc']);
   gulp.watch('./src/sass/**/*.scss', ['css']);
   gulp.watch('./src/js/**/*.js', ['js']);
   gulp.watch('./src/sass/components/*.scss', ['components']);
@@ -111,7 +123,7 @@ gulp.task('del:dist', function(){
 });
 
 // BUILD TASK
-gulp.task('build', ['html', 'css', 'js', 'img', 'fonts']);
+gulp.task('build', ['html', 'html-suc', 'css', 'js', 'img', 'fonts']);
 
 // START TASK
 gulp.task('start', ['del:dist', 'build', 'server', 'watch']);

@@ -3,12 +3,12 @@ $inline-title: #a38f6a;
 #sec-01 {
   position: relative;
   background-color: #222222;
-  background-image: url(img/sec-01/sec-01-bg.png);
+  background-image: url(img/sec-01/sec-01-bg-sm.png);
   background-size: cover;
-  background-position: top center;
+  background-position: top;
   background-repeat: no-repeat;
   padding-top: 2.8rem;
-  padding-bottom: 6rem; //16
+  padding-bottom: 6rem;
 }
 
 #sec-01 .sec-01__header [class*=col-]:first-child {
@@ -16,7 +16,7 @@ $inline-title: #a38f6a;
 }
 
 #sec-01 .logo {
-  width: pxToRem(35px); //51
+  width: pxToRem(35px);
   height: pxToRem(30px);
   fill: #fff;
 }
@@ -70,7 +70,9 @@ $inline-title: #a38f6a;
 
 @media (min-width: 768px) {
   #sec-01 {
+    background-image: url("img/sec-01/sec-01-bg-md.png");
     padding-bottom: 14.3rem;
+    padding-top: 1.2rem;
   }
 
   #sec-01 .logo {
@@ -95,8 +97,9 @@ $inline-title: #a38f6a;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1200px) {
   #sec-01 {
+    background-image: url(img/sec-01/sec-01-bg.png);
     padding-bottom: 16rem;
     &::before {
       display: block;

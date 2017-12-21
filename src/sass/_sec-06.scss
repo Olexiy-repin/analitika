@@ -35,7 +35,7 @@ $text-color: #28292d;
     display: block;
     content: url(img/sec-06/line.png);
     position: absolute;
-    top: -56%;
+    top: -26%;
     right: 0;
   }
 
@@ -43,7 +43,7 @@ $text-color: #28292d;
     display: block;
     content: url(img/sec-06/line.png);
     position: absolute;
-    bottom: -43%;
+    bottom: -20%;
     left: 0;
   }
 }
@@ -51,6 +51,11 @@ $text-color: #28292d;
 .logos__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 #sec-06 .sec-06-row > [class*=col-]:first-child {
@@ -124,15 +129,35 @@ $text-color: #28292d;
     margin-bottom: 0;
   }
 
+  .logos__row {
+    margin-bottom: 2.9rem;
+    align-items: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .logos {
     width: 86%;
     margin-top: 3.2rem;
     &::before {
       right: -17%;
+      top: -21.4%;
     }
 
     &::after {
       left: -18%;
+      bottom: -18%;
     }
+  }
+
+  .first-logos-row .logos__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .first-logos-row .sec-06__img {
+    width: 100%;
+    height: auto;
   }
 }

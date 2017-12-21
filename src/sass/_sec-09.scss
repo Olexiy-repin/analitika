@@ -59,32 +59,56 @@ $text-color: #28292d;
   width: 100%;
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1.9rem;
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
   font-size: 1rem;
   &:first-child {
-    margin-bottom: 1.9rem;
+    margin-bottom: 2.4rem;
   }
   &:focus {
     outline: none;
   }
+  &::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
 }
 
 ::-webkit-input-placeholder {
   color: $text-color;
   font-weight: bold;
 }
+
 ::-moz-placeholder {
   color: $text-color;
   font-weight: bold;
 }
+
 :-ms-input-placeholder {
   color: $text-color;
   font-weight: bold;
 }
+
 :-moz-placeholder {
   color: $text-color;
   font-weight: bold;
 }
+
+// :focus::-webkit-input-placeholder {
+//   color: transparent;
+// }
+// :focus::-moz-placeholder {
+//   color: transparent;
+// }
+// :focus:-moz-placeholder {
+//   color: transparent;
+// }
+// :focus:-ms-input-placeholder {
+//   color: transparent;
+// }
 
 .btn {
   width: 100%;
@@ -181,7 +205,7 @@ $text-color: #28292d;
     padding: 4.4rem 4.2rem;
   }
   .text-input {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2.3rem;
   }
   .btn {
     margin-top: .6rem;

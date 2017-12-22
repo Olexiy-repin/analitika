@@ -40,6 +40,7 @@
   letter-spacing: .4px;
   line-height: 1.4;
   transition: color .5s linear;
+  margin-right: 0;
   &:hover {
     color: rgb(179, 156, 114);
   }
@@ -77,6 +78,10 @@
 
   .footer__link {
     font-weight: bold;
+    margin-right: 6%;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 

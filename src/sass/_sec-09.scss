@@ -97,19 +97,6 @@ $text-color: #28292d;
   font-weight: bold;
 }
 
-// :focus::-webkit-input-placeholder {
-//   color: transparent;
-// }
-// :focus::-moz-placeholder {
-//   color: transparent;
-// }
-// :focus:-moz-placeholder {
-//   color: transparent;
-// }
-// :focus:-ms-input-placeholder {
-//   color: transparent;
-// }
-
 .btn {
   width: 100%;
   display: block;
@@ -125,6 +112,10 @@ $text-color: #28292d;
   transition: opacity .5s linear;
   box-shadow: 0 0 18px 9px #ccc;
   margin-top: .4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
   &:hover {
     opacity: .5;
   }

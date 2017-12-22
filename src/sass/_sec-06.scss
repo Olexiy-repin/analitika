@@ -129,8 +129,8 @@ $text-color: #28292d;
     margin-bottom: 0;
   }
 
-  .logos__row {
-    margin-bottom: 2.9rem;
+  #sec-06 .logos__row {
+    margin-bottom: 1.5rem;
     align-items: center;
     &:last-child {
       margin-bottom: 0;
@@ -139,15 +139,15 @@ $text-color: #28292d;
 
   .logos {
     width: 86%;
-    margin-top: 3.2rem;
+    margin-top: 2rem;
     &::before {
       right: -17%;
-      top: -21.4%;
+      top: -20%;
     }
 
     &::after {
       left: -18%;
-      bottom: -18%;
+      bottom: -20%;
     }
   }
 
@@ -159,5 +159,9 @@ $text-color: #28292d;
   .first-logos-row .sec-06__img {
     width: 100%;
     height: auto;
+  }
+
+  .img-hx36 {
+    height: 36px;
   }
 }

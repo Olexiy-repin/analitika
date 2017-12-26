@@ -170,4 +170,19 @@ $text-color: #28292d;
   #sec-07  .list__content {
     width: 92%;
   }
+
+  #sec-07 .picture:first-of-type {
+    width: pxToRem(725px);
+    height: pxToRem(609px);
+  }
+
+  #sec-07 .picture:last-of-type {
+    width: pxToRem(360px);
+    height: pxToRem(302px);
+  }
+
+  #sec-07 .sec-07__img {
+    width: 100%;
+    height: auto;
+  }
 }

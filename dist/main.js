@@ -95,7 +95,7 @@ $(document).ready(function() {
             success: function(response) {
                 console.info(response);
                 if (response.status == 'success') {
-                    window.location.href = "../success.html";
+                    window.location.href = "https://olexiy-repin.github.io/analitika/dist/success.html";
                 }
             }
         });

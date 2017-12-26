@@ -27,6 +27,12 @@ $text-color: #28292d;
   color: $text-color;
 }
 
+.sec-08__img-container .picture {
+  display: block;
+  width: pxToRem(290px);
+  height: pxToRem(158px);
+}
+
 @media (max-width: 767px) {
   .sec-08__img {
     display: block;
@@ -72,8 +78,8 @@ $text-color: #28292d;
 
   .sec-08__img-container .picture {
     display: block;
-    width: pxToRem(739px);
-    height: pxToRem(450px);
+    width: pxToRem(733px);
+    height: pxToRem(400px);
   }
 
   .sec-08__img {
@@ -105,6 +111,6 @@ $text-color: #28292d;
 
   .sec-08__img-container .picture {
     width: pxToRem(946px);
-    height: pxToRem(516px);
+    height: pxToRem(515px);
   }
 }

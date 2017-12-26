@@ -7,14 +7,43 @@
       </div>
       <div class="col-12 col-xl-6">
         <div class="form-container">
-          <form action="success.html" method="POST" class="sec-09__form">
+          <!-- <form action="success.html" method="POST" class="sec-09__form">
 
             <input type="hidden" name="page_url" value="success.html">
 
             <input class="text-input" type="text" name="" value="" placeholder="Ваше имя" required>
             <input class="text-input" type="tel" name="" value="" placeholder="Ваш номер телефона" required>
             <input class="btn" type="submit" name="send" value="Оставить заявку">
-          </form>
+          </form> -->
+        <form class="registration sec-09__form" action="#" method="post">
+         <input class="text-input" type="text" name="name" id="name" required placeholder="Ваше имя" >
+         <input class="text-input" type="tel" name="phone" id="phone" required placeholder="Ваш номер телефона">
+
+         <!-- Hidden Required Fields -->
+        <input type="hidden" name="project_name" value="Rezart">
+        <input type="hidden" name="admin_email" value="project@rezart.com.ua">
+        <input type="hidden" name="form_subject" value="Analitycs">
+        <!-- END Hidden Required Fields -->
+
+        <input type="hidden" name="orderType" value="Checklist">
+        <input type="hidden" name="page_url" value="http://funnel.rezart.agency/check/"> <!-- url сайта -->
+        <input type="hidden" name="user_agent" value="">
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_term" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="ref" value="">
+        <input type="hidden" name="ip_address" value="">
+        <input type="hidden" name="city" value="">
+        <input type="hidden" name="client_id" value="">
+        <input type="hidden" name="utmcsr" value="">
+        <input type="hidden" name="utmccn" value="">
+        <input type="hidden" name="utmcmd" value="">
+        <input type="hidden" class="gclid_field" name="click_id" value="">
+        <input type="hidden" name="affiliate_id" value="">
+       <button type="submit" class="submit-btn submit btn">Оставить заявку</button>
+     </form>
         </div>
       </div>
     </div>

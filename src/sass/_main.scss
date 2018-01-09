@@ -37,3 +37,51 @@ $baseFontSize: 16px;
     display: block;
   }
 }
+
+.field {
+   position: relative;
+ }
+ .error {
+
+ }
+ .allert {
+   position: absolute;
+   z-index: 20;
+   top: 50%;
+   display: block;
+   right: 15px;
+   height: 20px;
+   width: 20px;
+   color: #FF6565;
+   cursor: default;
+   transform: translateY(-50%);
+ }
+ .allert p {
+   display: none;
+     opacity: 0;
+     padding: 5px;
+     margin-left: 5px;
+     line-height: 14px;
+     color: #000;
+     font-style: italic;
+     font-size: 13px;
+     -webkit-border-radius: 4px;
+     border-radius: 4px;
+     -webkit-transition: all 0.5s;
+     transition: all 0.5s;
+     min-width: 140px;
+     text-align: center;
+ }
+ .allert:hover p {
+     border: 1px solid #FF6565;
+     background: #fff;
+     display: inline;
+     position: absolute;
+     color: #4e4e4e;
+     right: 24px;
+     top: -10px;
+     opacity: 1;
+ }
+ .allert svg {
+   width: 15px;
+ }

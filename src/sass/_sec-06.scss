@@ -91,13 +91,15 @@ $text-color: #28292d;
     width: 79%;
     &::before {
       content: url(img/sec-06/md-line.png);
-      top: -50%;
+      // top: -50%;
+      top: -27%;
       right: -41%;
     }
 
     &::after {
       content: url(img/sec-06/md-line.png);
-      bottom: -39%;
+      // bottom: -39%;
+      bottom: -23%;
       left: -13%;
     }
   }

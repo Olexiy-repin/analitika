@@ -1,53 +1,73 @@
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.8);
+  perspective: 3000px;
 }
 
-/* Modal Content */
+@keyframes modal-appear {
+  from {
+    transform: translate(-50%, -50%) rotateY(90deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+}
+
 .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-height: 80%;
-    transform: translate(-50%, -50%);
-    background-color: #fefefe;
-    margin: auto;
-    border: 1px solid #888;
-    width: 80%;
-    text-align: center;
-    overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 80%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  animation-name: modal-appear;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration: 180ms;
+  transform-origin: center center;
+  border-radius: 3px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* The Close Button */
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #000;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  right: 25px;
+  position: absolute;
+  top: 10px;
+  z-index: 1;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.modal-content .titlebox {
-  // position: fixed;
-  // left: 50%;
-  // transform: translateX(-50%);
-  margin-bottom: 24px;
+.titlebox {
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  padding: 0 25px;
 }
 
 .modal-content .tc {
@@ -59,8 +79,12 @@
   padding-top: pxToRem(50px);
 }
 
-.modal-content .md_content {
+.md_content {
   padding: 0 40px;
+  overflow: auto;
+  height: 80%;
+  width: 100%;
+  font-family: RadomirR;
 }
 
 .md_content p {
@@ -68,4 +92,14 @@
   padding: 10px 0;
   font-size: .9rem;
   color: rgb(102, 104, 105);
+}
+
+.md_content::-webkit-scrollbar {
+  width: 9px;
+  background: linear-gradient(to bottom, #ffffff 0%,#ccc 51%,#ffffff 100%);
+}
+
+.md_content::-webkit-scrollbar-thumb {
+  background: rgb(173, 151, 113);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, .5);
 }

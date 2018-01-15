@@ -1,78 +1,64 @@
-const find = selector => document.querySelector(selector);
-const findAll = selector => document.querySelectorAll(selector);
+// slider
+var slideIndex = 1;
+showDivs(slideIndex);
 
-/* slider */
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-const Slider = (() => {
-  let slideIndex = 1;
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
 
-  const renderSlider = () => {
-    const slides = document.getElementsByClassName('mySlides');
+//modal
+var firstModal = document.querySelector('#first-myModal');
+var secondModal = document.querySelector('#second-myModal');
+var thirdModal = document.querySelector('#third-myModal');
 
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
+var pBtn = document.querySelector("#politic-modal-btn");
+var rBtn = document.querySelector("#responsibility-modal-btn");
+var dBtn = document.querySelector("#dispatch-modal-btn");
+
+var span = document.querySelector(".close");
+
+// When the user clicks the button, open the modal
+pBtn.onclick = function() {
+    firstModal.style.display = "block";
+}
+rBtn.onclick = function() {
+    secondModal.style.display = "block";
+}
+dBtn.onclick = function() {
+    thirdModal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    firstModal.style.display = "none";
+}
+span.onclick = function() {
+    secondModal.style.display = "none";
+}
+span.onclick = function() {
+    thirdModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == firstModal) {
+        firstModal.style.display = "none";
+    } else if (event.target == secondModal) {
+      secondModal.style.display = "none";
+    } else if(event.target == thirdModal) {
+      thirdModal.style.display = "none";
     }
-
-    if (slideIndex < 1) {
-      slideIndex = slides.length;
-    }
-
-    Array.from(slides).forEach((slide) => {
-      slide.style.display = 'none';
-    });
-
-    slides[slideIndex - 1].style.display = 'block';
-  };
-
-  const switchSlide = (offset) => {
-    renderSlider(slideIndex += offset);
-  };
-
-  return {
-    render: renderSlider, 
-    switch: switchSlide,
-  };
-})();
-
-Slider.render();
-
-/* modal windows */
-
-const Modal = (root) => {
-  const show = () => {
-    root.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  };
-
-  const hide = () => {
-    root.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  };
-
-  const init = () => {
-    show(root);
-
-    root.querySelector('.close')
-      .onclick = () => hide(root);
-    
-    window.onclick = ({ target }) => {
-      if (target === root) {
-        hide(root);
-      }
-    };
-  };
-
-  return { show, hide, init };
-};
-
-const modalTriggers = findAll('.footer__link');
-Array.from(modalTriggers).forEach((trigger) => {
-  trigger.addEventListener('click', ({ target }) => {
-    const element = find(target.dataset.modal);
-
-    Modal(element).init();
-  });
-});
+}
 
 // form
 // $(document).ready(function() {
